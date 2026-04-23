@@ -190,7 +190,7 @@ export default function Home() {
   }, [])
 
   const handleLogout = async () => {
-    try { await axios.post('http://localhost:4000/api/auth/logout', {}, { withCredentials: true }) } catch (err) { console.error("Error al cerrar sesión:", err) }
+    try { await axios.post('https://proyectodia1.onrender.com/api/auth/logout', {}, { withCredentials: true }) } catch (err) { console.error("Error al cerrar sesión:", err) }
     logout(); navigate('/login')
   }
 

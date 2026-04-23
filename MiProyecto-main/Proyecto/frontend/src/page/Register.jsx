@@ -9,7 +9,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:4000/api/auth/register', form)
+      await axios.post('https://proyectodia1.onrender.com/api/auth/register', form)
       navigate('/login')
     } catch (err) { alert('Error al registrar') }
   }

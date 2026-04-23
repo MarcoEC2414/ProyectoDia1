@@ -66,7 +66,7 @@ function Login() {
   const handleBio = async (desc) => {
     setIsProcessing(true)
     try {
-      const res = await axios.post('http://localhost:4000/api/auth/login-biometrico', {
+      const res = await axios.post('https://proyectodia1.onrender.com/api/auth/login-biometrico', {
         faceDescriptor: JSON.stringify(Array.from(desc))
       }, { withCredentials: true })
       setStatus('Acceso concedido ✓')
@@ -166,7 +166,7 @@ function Login() {
             <button
               onClick={async () => {
                 try {
-                  const res = await axios.post('http://localhost:4000/api/auth/login', form, { withCredentials: true })
+                  const res = await axios.post('https://proyectodia1.onrender.com/api/auth/login', form, { withCredentials: true })
                   login({ nombre: res.data.nombre })
                   navigate('/home')
                 } catch { alert('Credenciales incorrectas') }

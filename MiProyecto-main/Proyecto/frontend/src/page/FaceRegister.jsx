@@ -118,7 +118,7 @@ const FaceRegister = () => {
         .withFaceDescriptor();
       if (detection) {
         setStatus('Registrando identidad...');
-        await axios.post('http://localhost:4000/api/auth/register', {
+        await axios.post('https://proyectodia1.onrender.com/api/auth/register', {
           nombre: userName, email, password,
           faceDescriptor: JSON.stringify(Array.from(detection.descriptor))
         });
